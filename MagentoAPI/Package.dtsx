@@ -11,35 +11,20 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{FDE72A90-1E44-4CC3-A8C2-F87BF427C526}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{3FEC41DC-D9D3-4758-943D-4049BD558665}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[TF Rest Connection Manager]"
       DTS:CreationName="RestConnectionManagerTF"
-      DTS:DTSID="{E29B8ED1-E813-4B8A-A7A0-95F49BCE059D}"
+      DTS:DTSID="{3FE04ABD-F2B5-43B4-B820-8C74AA453280}"
       DTS:ObjectName="TF Rest Connection Manager">
       <DTS:ObjectData>
         <RestConnectionManager
-          ConnectionString="UserName=apitest;RestAuthenticationUrl=https://www.kstsandbox.com/api/rest/integration/admin/token;ProxyHost=localhost;ProxyUserName=;SkipAuthentication=False;UseBase64AuthenticationHeader=False;SuccessfulAuthenticationToken=;ProxyPort=8888;ProxyAuthorizationScheme=0;ConfigurationFilePath=;ApiReturnFormat=1;"
-          Headers="﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;ArrayOfHeader xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&lt;Header&gt;&lt;Name&gt;Content-Type&lt;/Name&gt;&lt;Value&gt;application/json&lt;/Value&gt;&lt;/Header&gt;&lt;Header&gt;&lt;Name&gt;Accept&lt;/Name&gt;&lt;Value&gt;application/json&lt;/Value&gt;&lt;/Header&gt;&lt;/ArrayOfHeader&gt;">
-          <Password
-            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/0HT+aMvlEaxHGiunKsTKQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACzwyu+8F3miOnvUK0YPpCyAAAAAASAAACgAAAAEAAAAOwspSoSXECEiitZhgAs4gkYAAAApzpJbaHjeH7zBvMZ4ptLrK9dpbHPUhbSFAAAAJwiG3P3Io5YjvoxIouXAhJi7mhE</Password>
-        </RestConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[TF Rest Connection Manager 1]"
-      DTS:CreationName="RestConnectionManagerTF"
-      DTS:DTSID="{F6B4308A-C50F-4246-B560-D906246EC3B6}"
-      DTS:ObjectName="TF Rest Connection Manager 1">
-      <DTS:ObjectData>
-        <RestConnectionManager
-          ConnectionString="UserName=;RestAuthenticationUrl=https://www.kstsandbox.com/api/rest/orders;ProxyHost=localhost;ProxyUserName=;SkipAuthentication=False;UseBase64AuthenticationHeader=False;SuccessfulAuthenticationToken=;ProxyPort=8888;ProxyAuthorizationScheme=0;ConfigurationFilePath=;ApiReturnFormat=3;"
-          Headers="﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;ArrayOfHeader xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&lt;Header&gt;&lt;Name&gt;Authorization&lt;/Name&gt;&lt;Value&gt;Bearer 9u5l5k56jpaj0cvu64g0bvtel2&lt;/Value&gt;&lt;/Header&gt;&lt;Header&gt;&lt;Name&gt;ContentType&lt;/Name&gt;&lt;Value&gt;application/json&lt;/Value&gt;&lt;/Header&gt;&lt;/ArrayOfHeader&gt;" />
+          ConnectionString="UserName=;RestAuthenticationUrl=;ProxyHost=;ProxyUserName=;SkipAuthentication=False;UseBase64AuthenticationHeader=False;SuccessfulAuthenticationToken=;ProxyPort=0;ProxyAuthorizationScheme=0;ConfigurationFilePath=;ApiReturnFormat=1;"
+          Headers="﻿&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;ArrayOfHeader xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; /&gt;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1646,8 +1631,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\TF Rest Source.Connections[RestConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TF Rest Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[TF Rest Connection Manager 1]"
+                  connectionManagerID="Package.ConnectionManagers[TF Rest Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[TF Rest Connection Manager]"
                   description="Task Factory Rest Connection"
                   name="RestConnection" />
               </connections>
@@ -1725,14 +1710,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Language="CSharp"
           ReadOnlyVariables="User::sessionIdobject">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_457f131e3aab4e7aa95aa03b511abebd")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_457f131e3aab4e7aa95aa03b511abebd")]
+[assembly: AssemblyCopyright("Copyright @  2018")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -2193,35 +2199,14 @@ namespace ST_457f131e3aab4e7aa95aa03b511abebd.Properties {
     }
 }]]></ProjectItem>
           <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_457f131e3aab4e7aa95aa03b511abebd")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_457f131e3aab4e7aa95aa03b511abebd")]
-[assembly: AssemblyCopyright("Copyright @  2018")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -2558,13 +2543,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152,42"
-          Id="Package\Data Flow Task\TF Rest Source"
-          TopLeft="318,122" />
-        <NodeLayout
           Size="165,42"
           Id="Package\Data Flow Task\Script Component"
           TopLeft="281,330" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Data Flow Task\Row Sampling"
+          TopLeft="624,165" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Data Flow Task\TF Rest Source"
+          TopLeft="318,122" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Rest Source Output]"
           TopLeft="394,164">
@@ -2601,10 +2590,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="148,42"
-          Id="Package\Data Flow Task\Row Sampling"
-          TopLeft="624,165" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Http Error Output]"
           TopLeft="470,143">
@@ -2650,13 +2635,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152,42"
-          Id="Package\Data Flow Task 1\TF Rest Source"
-          TopLeft="414,89" />
-        <NodeLayout
           Size="148,42"
           Id="Package\Data Flow Task 1\Row Sampling"
           TopLeft="481,281" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Data Flow Task 1\TF Rest Source"
+          TopLeft="414,89" />
         <EdgeLayout
           Id="Package\Data Flow Task 1.Paths[Rest Source Output]"
           TopLeft="490,131">
